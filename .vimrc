@@ -1,14 +1,17 @@
 " set compatibility to vim only
 set nocompatible
+packadd! matchit
+
+" peristent undo
+set undofile
 
 " set syntax highLighting
 syntax on
 
 " set line numbering
-set number
+set relativenumber
 
 " search option
-set hlsearch
 set incsearch
 set ignorecase
 
