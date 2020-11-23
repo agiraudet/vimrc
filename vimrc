@@ -2,9 +2,6 @@
 set nocompatible
 packadd! matchit
 
-" peristent undo
-set undofile
-
 " set syntax highLighting
 syntax on
 
@@ -50,3 +47,6 @@ nnoremap ,mc :-1read $HOME/.vim/snippets/main.c<CR>:.+5d<CR>kkA
 " auto-add 42 header (and headerguard) when creating file
 autocmd BufNewFile *.c execute "normal \<F1>"
 autocmd BufNewFile *.h execute "normal \<F1>,hg"
+
+" collect prototypes
+command -nargs=+ P execute "r !python3 $HOME/.vim/protos.py " <q-args>
