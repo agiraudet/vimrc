@@ -10,7 +10,7 @@ for filename in sys.argv:
     if filename != sys.argv[0]:
         with open(filename, 'r') as fd:
             for line in fd:
-                if line[0] in "suciltugv":
+                if line[0] in "sfuciltugv":
                     if "static" not in line[:6]:
                         line = line[:-1] + ';'
                         protoList.append(line)
